@@ -20,3 +20,11 @@
      Sample folder contains original PSD file used to create sample character and an export for Windows if you wish to try out the end result.
 
      Detailed PDF with instructions for those with less knowledge of godot and visuals will be added soon.
+
+# Special to helpers:
+    Kapioga
+    MaffiLu
+    Moondancer0x
+    Pascal
+    RoshanGalaxyVT
+    Spurs
