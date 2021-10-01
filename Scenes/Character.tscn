@@ -1,0 +1,62 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Character.gd" type="Script" id=1]
+[ext_resource path="res://CharacterFrames/Blink1.png" type="Texture" id=2]
+[ext_resource path="res://CharacterFrames/talk1.png" type="Texture" id=3]
+[ext_resource path="res://CharacterFrames/Idle.png" type="Texture" id=4]
+[ext_resource path="res://CharacterFrames/Blink3.png" type="Texture" id=5]
+[ext_resource path="res://CharacterFrames/talk2.png" type="Texture" id=6]
+[ext_resource path="res://CharacterFrames/talk3.png" type="Texture" id=7]
+[ext_resource path="res://CharacterFrames/Blink0.png" type="Texture" id=8]
+[ext_resource path="res://CharacterFrames/Blink2.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "talk",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "blinking",
+"speed": 12.0
+} ]
+
+[sub_resource type="AudioStreamMicrophone" id=3]
+
+[node name="Character" type="Node2D"]
+position = Vector2( 497.845, 348.843 )
+scale = Vector2( 0.6, 0.6 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="character" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "talk"
+
+[node name="eyes" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "blinking"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.081
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource( 3 )
+autoplay = true
+bus = "Mic"
+
+[connection signal="animation_finished" from="eyes" to="." method="_on_eyes_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
