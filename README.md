@@ -21,7 +21,7 @@
 
      Detailed PDF with instructions for those with less knowledge of godot and visuals will be added soon.
 
-# Special to helpers:
+# Special thanks to helpers:
     Kapioga
     MaffiLu
     Moondancer0x
