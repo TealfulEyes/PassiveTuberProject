@@ -3,12 +3,12 @@
 
  Import the project into Godot at the Project List window. You may need to unpack the ZIP file first if not all files import correctly. 
 
- What you'll need:
-    -Godot
+# What you'll need:
+    -Godot v3+
     -Art software(to make your own character or modify the sample)
     -OBS
 
- # Baic Overview:
+# Baic Overview:
 
     You can change background of the environment by going to Project Settings>Rendering>Environment
 
