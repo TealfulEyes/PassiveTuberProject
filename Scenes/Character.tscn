@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Character.gd" type="Script" id=1]
-[ext_resource path="res://CharacterFrames/Blink1.png" type="Texture" id=2]
-[ext_resource path="res://CharacterFrames/talk1.png" type="Texture" id=3]
-[ext_resource path="res://CharacterFrames/Idle.png" type="Texture" id=4]
-[ext_resource path="res://CharacterFrames/Blink3.png" type="Texture" id=5]
-[ext_resource path="res://CharacterFrames/talk2.png" type="Texture" id=6]
-[ext_resource path="res://CharacterFrames/talk3.png" type="Texture" id=7]
-[ext_resource path="res://CharacterFrames/Blink0.png" type="Texture" id=8]
-[ext_resource path="res://CharacterFrames/Blink2.png" type="Texture" id=9]
+[ext_resource path="res://CharacterFrames/Blink1.png" type="Texture2D" id=2]
+[ext_resource path="res://CharacterFrames/talk1.png" type="Texture2D" id=3]
+[ext_resource path="res://CharacterFrames/Idle.png" type="Texture2D" id=4]
+[ext_resource path="res://CharacterFrames/Blink3.png" type="Texture2D" id=5]
+[ext_resource path="res://CharacterFrames/talk2.png" type="Texture2D" id=6]
+[ext_resource path="res://CharacterFrames/talk3.png" type="Texture2D" id=7]
+[ext_resource path="res://CharacterFrames/Blink0.png" type="Texture2D" id=8]
+[ext_resource path="res://CharacterFrames/Blink2.png" type="Texture2D" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -41,11 +41,11 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="character" type="AnimatedSprite" parent="."]
+[node name="character" type="AnimatedSprite2D" parent="."]
 frames = SubResource( 1 )
 animation = "talk"
 
-[node name="eyes" type="AnimatedSprite" parent="."]
+[node name="eyes" type="AnimatedSprite2D" parent="."]
 frames = SubResource( 2 )
 animation = "blinking"
 

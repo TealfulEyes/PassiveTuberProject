@@ -1,7 +1,7 @@
 extends Node2D
 
 var micDetection
-export var canBlink = true
+@export var canBlink = true
 ## ADD, CHANGE, OR REMOVE NUMBERS FROM THE BACKET HERE FOR RANDOMIZED BLINK TIMES ##
 var blinktime = [2,1,5,10,4]
 
