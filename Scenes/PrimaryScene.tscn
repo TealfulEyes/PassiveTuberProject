@@ -2,6 +2,32 @@
 
 [ext_resource type="PackedScene" uid="uid://yfgnw22y7c6f" path="res://Scenes/Character.tscn" id="1"]
 
-[node name="Node" type="Node"]
+[node name="Holder" type="Node"]
 
 [node name="Character" parent="." instance=ExtResource("1")]
+position = Vector2(539, 366)
+
+[node name="Controller" type="Control" parent="Character"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -768.0
+offset_top = -60.0
+offset_right = -625.0
+offset_bottom = 344.0
+
+[node name="Panel" type="Panel" parent="Character/Controller"]
+layout_mode = 0
+offset_left = -0.0749702
+offset_top = 8.59499
+offset_right = 140.925
+offset_bottom = 401.595
+
+[node name="Threshold" type="VSlider" parent="Character/Controller"]
+layout_mode = 0
+offset_left = 26.5917
+offset_top = 45.2617
+offset_right = 114.592
+offset_bottom = 360.262
+max_value = 200.0
+
+[connection signal="value_changed" from="Character/Controller/Threshold" to="." method="_on_threshold_value_changed"]

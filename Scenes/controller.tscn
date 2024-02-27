@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5cyckrqphrlm"]
+
+[ext_resource type="Script" path="res://Scenes/controller.gd" id="1_352ew"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -885.0
+offset_bottom = -302.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_352ew")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 348.0
+offset_bottom = 87.0
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 23.0
+offset_right = 326.0
+offset_bottom = 62.0
+max_value = 200.0
+step = 5.0
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

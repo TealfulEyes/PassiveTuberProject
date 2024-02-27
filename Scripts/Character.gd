@@ -14,9 +14,9 @@ func _ready():
 func _process(_delta):
 	micDetection = abs(AudioServer.get_bus_peak_volume_left_db(AudioServer.get_bus_index("Mic"),0))
 	# SET THE NUMBERS BELOW TO BE THE SAME. REMOVE "#" FRIN LINE 21 TO PRINT IN REALTIME WHAT YOUR MIC IS DETECTING, IF IT SHOWS AS 200, THERE IS NO SOUND BEING DETECTED
-	if micDetection < micThreshold: 
+	if micDetection < $Controller/Threshold.value: 
 		$character.play("talk")
-	elif micDetection > micThreshold:
+	elif micDetection > $Controller/Threshold.value:
 		$character.play("idle")
 	## PRINTS THE REAL TIME MICROPHONE VOLUME (THIS CAN HELP WITH SENSITIVITY WHEN TALKING SHOULD AND SHOULDNT TRIGGER) ##
 	print("Current Volume is ", micDetection)
