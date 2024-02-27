@@ -19,7 +19,7 @@ func _process(_delta):
 	elif micDetection > $Controller/Threshold.value:
 		$character.play("idle")
 	## PRINTS THE REAL TIME MICROPHONE VOLUME (THIS CAN HELP WITH SENSITIVITY WHEN TALKING SHOULD AND SHOULDNT TRIGGER) ##
-	print("Current Volume is ", micDetection)
+	#print("Current Volume is ", micDetection)
 	## BLINK TIMER - REMOVE "#" FROM LINE BELOW TO SEE WHAT THE TIME IS SET TO ##
 	#print($Timer.wait_time)
 
